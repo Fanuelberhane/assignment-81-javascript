@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>assignement 8 </title>
+</head>
+<body style="background-color: aquamarine;">
+  <h3 style="color: rgb(2, 120, 133);">Double Numbers</h3>
+  
+  <p>frist Array elements: [2, 3, 4, 5, 6]</p>
+  <p>doubled Array elements: <span id="doubledArray"></span></p>
+
+  <button onclick="displayDoubledNumbers()">Double Numbers</button>
+
+<br>
+<br>
+
+<h3 style="color: rgb(2, 120, 133);">Object Properties</h3>
+  <button onclick="printObjectProperties()">Print Object Properties</button>
+
+
+  <br>
+  <br>
+
+  <h3  style="color: rgb(2, 120, 133);">Strings Delay</h3>
+  <button onclick="printStrings()">Print Strings</button>
+
+
+  <script>
+    function doubleNumbers(arr) {
+      const doubledArray = [];
+      for (const number of arr) {
+        doubledArray.push(number * 2);
+      }
+      return doubledArray;
+    }
+
+    function displayDoubledNumbers() {
+      const originalArray = [2, 3, 4, 5, 6];
+      const doubledArray = doubleNumbers(originalArray);
+      document.getElementById('doubledArray').innerText = doubledArray.join(', ');
+    }
+
+
+    
+    function printObjectProperties(obj) {
+      for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          console.log(`Key: ${key}, Value: ${obj[key]}`);
+        }
+      }
+    }
+
+    function printObjectProperties() {
+      const exampleObject = { name: 'fanuel', age: 30, city: 'addis ababa' };
+      for (const key in exampleObject) {
+        if (exampleObject.hasOwnProperty(key)) {
+          console.log(`Key: ${key}, Value: ${exampleObject[key]}`);
+        }
+      }
+    }
+
+
+    function printStrings() {
+      const strings = 'This is Dot ethiopia and Namal';
+
+  
+
+      for (let index = 0; index < strings.length; index++) {
+        setTimeout(() => {
+          console.log(strings.charAt(index));
+        }, index * 1000);
+      }
+        
+      }
+
+
+
+ 
+    
+
+
+
+
+
+    
+
+    
+  </script>
+</body>
+</html>
